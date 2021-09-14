@@ -14,6 +14,7 @@ jobs:
           persist-credentials: false
       - name: sync zero205-scripts
         uses: repo-sync/github-sync@v2
+        run: echo "test log 123"
         if: env.PAT
         with:
           run: echo "test log"
