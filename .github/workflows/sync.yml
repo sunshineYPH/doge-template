@@ -16,7 +16,8 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          echo "test log"
+          run: echo "test log"
+          run: echo "${{ secrets.PAT }}"
           source_repo: "https://github.com/zero205/JD_tencent_scf.git"
           source_branch: "scf"
           destination_branch: "main"
